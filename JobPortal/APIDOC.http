@@ -1,0 +1,137 @@
+###
+GET http://127.0.0.1:8000/api/company/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/company/
+Content-Type: application/json
+
+{
+    "company_name": "IBM",
+    "location": "Bengaluru",
+    "industry": "Technology and Consulting",
+    "website": "https://www.ibm.com",
+    "contact_email": "careers@example.com"
+}
+
+###
+GET http://127.0.0.1:8000/api/company/4/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/api/company/4/
+Content-Type: application/json
+
+{
+  "id": 4,
+  "company_name": "Cognizant",
+  "location": "Bengaluru",
+  "industry": "Information Technology",
+  "website": "https://www.google.com",
+  "contact_email": "hr@example.com"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/company/5/
+Accept: application/json
+
+
+### GET - All jobs
+GET http://127.0.0.1:8000/api/job/
+Accept: application/json
+
+###
+
+### POST - Create job
+POST http://127.0.0.1:8000/api/job/
+Content-Type: application/json
+
+{
+    "job_title": "Python Developer",
+    "company": 1,
+    "description": "Backend development",
+    "required_skills": "Python, Django, DRF",
+    "salary": 40000,
+    "experience_required": 1,
+    "job_type": "Full Time",
+    "is_active": true
+}
+
+###
+
+### GET - Single job
+GET http://127.0.0.1:8000/api/job/1/
+Accept: application/json
+
+###
+
+### PUT - Update job
+PUT http://127.0.0.1:8000/api/job/1/
+Content-Type: application/json
+
+{
+    "job_title": "Django Developer",
+    "company": 1,
+    "description": "Django REST API development",
+    "required_skills": "Python, Django, DRF, MySQL",
+    "salary": 50000,
+    "experience_required": 2,
+    "job_type": "Full Time",
+    "is_active": true
+}
+
+###
+
+### DELETE - Delete job
+DELETE http://127.0.0.1:8000/api/job/1/
+Accept: application/json
+
+
+### GET - All applications
+GET http://127.0.0.1:8000/api/application/
+Accept: application/json
+
+###
+
+### POST - Create application
+POST http://127.0.0.1:8000/api/application/
+Content-Type: application/json
+
+{
+    "applicant_name": "Riya",
+    "email": "riya@gmail.com",
+    "phone": "9876543210",
+    "job": 1,
+    "qualification": "BTech Computer Science",
+    "experience": 0,
+    "cover_letter": "I am interested in this job opportunity."
+}
+
+###
+
+### GET - Single application
+GET http://127.0.0.1:8000/api/application/1/
+Accept: application/json
+
+###
+
+### PUT - Update application
+PUT http://127.0.0.1:8000/api/application/1/
+Content-Type: application/json
+
+{
+    "applicant_name": "Riya",
+    "email": "riya@gmail.com",
+    "phone": "9876543210",
+    "job": 1,
+    "qualification": "BTech Computer Science",
+    "experience": 1,
+    "cover_letter": "Updated application details.",
+    "status": "approved"
+}
+
+###
+
+### DELETE - Delete application
+DELETE http://127.0.0.1:8000/api/application/1/
+Accept: application/json
